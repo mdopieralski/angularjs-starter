@@ -1,6 +1,6 @@
 # angular-md-starter
 
-[![Build Status](https://magnum.travis-ci.com/mdopieralski/angular-md-starter.svg?token=SAUE9RQMSLpnyzDMyaPP&branch=development)](https://magnum.travis-ci.com/mdopieralski/angular-md-starter)
+[![Build Status](https://travis-ci.org/mdopieralski/angular-md-starter.svg?branch=master)](https://travis-ci.org/mdopieralski/angular-md-starter)
 [![devDependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/dev-status.svg)](https://david-dm.org/mdopieralski/angular-md-starter?type=dev)
 [![dependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/status.svg)](https://david-dm.org/mdopieralski/angular-md-starter)
 
