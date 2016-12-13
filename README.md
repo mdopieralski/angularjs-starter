@@ -1,6 +1,8 @@
 # angular-md-starter
 
 [![Build Status](https://magnum.travis-ci.com/mdopieralski/angular-md-starter.svg?token=SAUE9RQMSLpnyzDMyaPP&branch=development)](https://magnum.travis-ci.com/mdopieralski/angular-md-starter)
+[![devDependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/dev-status.svg)](https://david-dm.org/mdopieralski/angular-md-starter?type=dev)
+[![dependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/status.svg)](https://david-dm.org/mdopieralski/angular-md-starter)
 
 Angular 1.6 starter kit. 
 Heavily inspired by [Todd Motto's](https://toddmotto.com/) [angular styleguide](https://github.com/toddmotto/angular-styleguide).
@@ -30,10 +32,15 @@ Where CONFIG_NAME is one of "/src/app/config/data/*constants.json".
 Currently availbe configurations:
 
 `npm run start:local-tests`
+
 `npm run start:local`
+
 `npm run start:production`
+
 `npm run start:remote-tests`
+
 `npm run start:tests-remote`
+
 
 ### Tests
 -------------
