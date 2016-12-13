@@ -1,0 +1,31 @@
+language: node_js
+node_js:
+  - 4.0.0
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
+sudo: true
+cache:
+  directories:
+  - node_modules
+before_install:
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+install:
+- npm install
+- npm install webpack
+- npm install protractor@3.2.2
+- ./node_modules/protractor/bin/webdriver-manager update
+script:
+- npm run build
+- npm run test
+- node server.test.js &
+- npm run test-e2e
+env:
+  global:
+  - BUILD=1
+  - REMOTE_TESTS=1
+  - CXX=g++-4.8
