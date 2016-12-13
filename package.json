@@ -49,7 +49,7 @@
     "postbuild": "cp -r src/assets/img dist/assets/ && cp -r src/build-files/. dist/",
     "start": "USE_CONFIG=local babel-node server.local.js",
     "start:production": "USE_CONFIG=production babel-node server.local.js",
-    "jshint": "./node_modules/jshint/bin/jshint --reporter ./node_modules/jshint-stylish/stylish.js src/app",
+    "jshint": "./node_modules/jshint/bin/jshint --reporter ./node_modules/jshint-stylish/ src/app",
     "precommit": "npm run jshint",
     "commit": "git-cz",
     "protractor": "protractor protractor.conf.js",
