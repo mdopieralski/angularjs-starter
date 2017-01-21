@@ -1,5 +1,6 @@
 <main>
   <d-header></d-header>
-  <h1>Hello, I'm root component.</h1>
+  <h1>{{ rootComponent.header }}</h1>
+  <button type="button" data-ng-click="rootComponent.toggleHeaderText()">Toggle header</button>
   <section data-ui-view></section>
 </main>

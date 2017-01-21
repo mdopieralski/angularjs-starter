@@ -53,7 +53,7 @@ const CONFIG = {
   module: {
     loaders: [{
       test: /\.js$/,
-      exclude: /(node_modules|vendor)/,
+      exclude: /(node_modules|vendor|\*.spec.js)/,
       loaders: ['ng-annotate', 'babel-loader'],
     }, {
       test: /\.html$/,

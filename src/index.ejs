@@ -23,7 +23,7 @@
     <meta name="twitter:image:src" content="">
 
     <% if(htmlWebpackPlugin.options.E2E_TEST){ %>
-      <link href="/assets/bundle.css" rel="stylesheet"></head>
+      <link href="/assets/bundle.css" rel="stylesheet">
     <% } %>
   </head>
   <body>
@@ -32,6 +32,10 @@
 
     <% if(!htmlWebpackPlugin.options.IS_BUILD){ %>
         <script src="http://localhost:35729/livereload.js"></script>
+    <% } %>
+
+    <% if(htmlWebpackPlugin.options.E2E_TEST){ %>
+        <script src="/assets/bundle.js"></script>
     <% } %>
 </body>
 </html>

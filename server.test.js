@@ -9,7 +9,6 @@ var app = express();
 app.set('views', path.join(__dirname, '/src/'));
 app.set('view engine', 'ejs');
 app.use(function(req, res, next) {
-
   if (req.url.match(/\/(app|assets)\//)) {
 
     return staticFiles(req, res, next);
@@ -26,4 +25,10 @@ app.use(function(req, res, next) {
   }
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(process.env.PORT || 3000, 'localhost', function(err) {
+
+  if (err) {
+    console.log(err);
+  }
+  console.log('Listening at localhost:' + (process.env.PORT || 3000));
+});
