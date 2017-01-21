@@ -44,19 +44,21 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist && mkdir dist dist/assets/",
-    "build": "USE_CONFIG=production babel-node --harmony ./node_modules/webpack/bin/webpack --build",
-    "build:local": "USE_CONFIG=local babel-node --harmony ./node_modules/webpack/bin/webpack --build",
-    "postbuild": "cp -r src/assets/img dist/assets/ && cp -r src/build-files/. dist/",
-    "start": "USE_CONFIG=local babel-node server.local.js",
-    "start:production": "USE_CONFIG=production babel-node server.local.js",
+    "postbuild": "cp -r src/assets/img dist/assets/",
+    "build": "USE_CONFIG=$npm_config_appConfig babel-node --harmony ./node_modules/webpack/bin/webpack --build",
+    "build:local": "npm run build --appConfig=local",
+    "build:dev-api": "npm run build --appConfig=dev-api",
+    "build:production": "npm run build --appConfig=production",
+    "start": "USE_CONFIG=$npm_config_appConfig babel-node server.local.js",
+    "start:dev-api": "npm run start --appConfig=dev-api",
+    "start:local": "npm run start --appConfig=local",
+    "start:production": "npm run start --appConfig=production",
     "jshint": "./node_modules/jshint/bin/jshint --reporter ./node_modules/jshint-stylish/ src/app",
     "precommit": "npm run jshint",
     "commit": "git-cz",
     "protractor": "protractor protractor.conf.js",
     "test": "USE_CONFIG=local-tests babel-node --harmony ./node_modules/karma/bin/karma start ./karma.conf.js",
-    "test-remote": "USE_CONFIG=remote-tests babel-node --harmony ./node_modules/karma/bin/karma start ./karma.conf.js",
-    "test-e2e": "./node_modules/protractor/bin/protractor protractor.conf.js",
-    "travis-flow": "npm run build && npm run test && node server.test.js & npm run test-e2e"
+    "test-e2e": "./node_modules/protractor/bin/protractor protractor.conf.js"
   },
   "dependencies": {
     "express": "^4.2.0"
