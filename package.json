@@ -61,6 +61,7 @@
     "test-e2e": "./node_modules/protractor/bin/protractor protractor.conf.js"
   },
   "dependencies": {
+    "ejs": "^2.5.5",
     "express": "^4.2.0"
   },
   "config": {
