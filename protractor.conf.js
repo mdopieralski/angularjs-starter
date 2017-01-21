@@ -1,6 +1,8 @@
+'use strict';
+
 var config = {
   seleniumAddress: 'http://localhost:4444/wd/hub',
-  specs: ['src/test/e2e/**/*.js'],
+  specs: ['src/e2e-tests/**/*.js'],
   baseUrl: 'http://localhost:3000', //default test port with Yeoman
   capabilities: {
     browserName: 'firefox',
@@ -8,12 +10,11 @@ var config = {
     platform: 'ANY'
   },
   suites: {
-    main: 'src/test/e2e/main/*.test.js',
-    search: 'src/test/e2e/search/*.test.js',
-    category: 'src/test/e2e/category/*.test.js',
-    all: 'src/test/e2e/**/*.test.js'
+    root: 'src/e2e-tests/root/*.test.js',
+    all: 'src/e2e-tests/**/*.test.js'
   },
   onPrepare: function() {
+
     browser.manage().window().setSize(1920, 1080);
   }
 };
