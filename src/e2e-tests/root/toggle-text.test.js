@@ -16,9 +16,9 @@ describe('toggle text', () => {
 
     it('header should display certain text', () => {
 
-      var text = element(By.css('h1')).getText();
+      var header = element(By.css('h1'));
 
-      expect(text).toEqual(headers[0]);
+      expect(header.getText()).toEqual(headers[0]);
     });
   });
 
