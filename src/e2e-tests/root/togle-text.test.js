@@ -2,29 +2,35 @@
 
 var RootPage = require('./root.page.js');
 
-describe('toggle text', function() {
+describe('toggle text', () => {
 
   var page = new RootPage();
   var headers = ['Hello, I\'m root component.', 'I can do cool things, mate.'];
 
-  beforeEach(function() {
+  beforeEach(() => {
+
     browser.get('/');
   });
 
-  describe('onload', function() {
+  describe('onload', () => {
 
-    it('header should display certain text', function() {
+    it('header should display certain text', () => {
 
-      expect(element(By.css('h1')).getText()).toEqual(headers[0]);
+      var text = element(By.css('h1')).getText();
+
+      expect(text).toEqual(headers[0]);
     });
-
   });
-  describe('after first click', function() {
 
-    it('header should display certain text', function() {
+  describe('after first click', () => {
+
+    it('header should display certain text', () => {
 
       page.toggleText();
-      expect(element(By.css('h1')).getText()).toEqual(headers[1]);
+
+      var text = element(By.css('h1')).getText();
+
+      expect(text).toEqual(headers[1]);
     });
   });
 });
