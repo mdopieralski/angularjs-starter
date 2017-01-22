@@ -7,7 +7,7 @@
 Angular 1.6 starter kit. 
 Heavily inspired by [Todd Motto's](https://toddmotto.com/) [angular styleguide](https://github.com/toddmotto/angular-styleguide).
 
-NOTE: Required NodeJS version 4.0.0 && NPM v. 2.14.2
+NOTE: Required NodeJS v6.9.4 && NPM v.3.10.10
 
 Based on: 
 
@@ -20,8 +20,11 @@ Based on:
 
 -------------
 
-### Install
+### Setup
 -------------
+
+Start with installing dependencies.
+
 `npm install`
 
 ### Run
@@ -39,8 +42,6 @@ Currently availbe configurations:
 
 `npm run start:remote-tests`
 
-`npm run start:tests-remote`
-
 
 ### Tests
 -------------
@@ -54,8 +55,8 @@ We use [commitizen](https://github.com/commitizen/cz-cli/), with [cz-conventiona
 
 `npm run commit`
 
-There's jshint hooked in "precommit" npm script. After commit, please leave a couple words in [releases](https://github.com/Airnauts/nowness-frontend/releases) if it's needed !
+There's jshint hooked in "precommit" npm script.
 
 ### Building
 -------------------
-`npm run build`
+`npm run build:CONFIG_NAME`
