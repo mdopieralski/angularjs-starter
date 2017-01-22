@@ -12,7 +12,7 @@ function PageConfig($stateProvider) {
 
   $stateProvider
     .state('root.page', {
-      url: '',
+      url: 'page',
       template: '<page-component></page-component>'
     });
 
