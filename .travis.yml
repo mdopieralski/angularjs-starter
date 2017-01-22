@@ -17,7 +17,7 @@ before_install:
 install:
 - npm install
 - npm install webpack
-- npm install protractor@3.2.2
+- npm install protractor@5.0.0
 - ./node_modules/protractor/bin/webdriver-manager update
 script:
 - npm run build:local
