@@ -20,8 +20,8 @@ module.exports = function(config) {
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_DISABLE,
     autoWatch: true,
-    browsers: ['Chrome'],
-    // browsers: ['PhantomJS'],
+    // browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
     // browsers: ['Firefox'],
     preprocessors: {
       'src/app/**/*.spec.js': ['babel']
