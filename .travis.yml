@@ -1,10 +1,7 @@
 language: node_js
 node_js:
-  - 6.9.4
+  - "6"
 sudo: true
-cache:
-  directories:
-  - node_modules
 before_install:
 - export DISPLAY=:99.0
 - sh -e /etc/init.d/xvfb start
