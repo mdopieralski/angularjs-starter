@@ -21,8 +21,8 @@ module.exports = function(config) {
     logLevel: config.LOG_DISABLE,
     autoWatch: true,
     // browsers: ['Chrome'],
-    // browsers: ['PhantomJS'],
-    browsers: ['Firefox'],
+    browsers: ['PhantomJS'],
+    // browsers: ['Firefox'],
     preprocessors: {
       'src/app/**/*.spec.js': ['babel']
     },

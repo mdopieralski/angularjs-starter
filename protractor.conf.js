@@ -1,7 +1,7 @@
 'use strict';
 
 var config = {
-  seleniumAddress: 'http://localhost:4444/wd/hub',
+  // seleniumAddress: 'http://localhost:4444/wd/hub',
   specs: ['src/e2e-tests/**/*.js'],
   baseUrl: 'http://localhost:3000', //default test port with Yeoman
   capabilities: {
