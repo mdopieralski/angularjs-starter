@@ -1,31 +1,21 @@
+sudo: required
 language: node_js
 node_js:
   - 6.9.4
 addons:
-  apt:
-    sources:
-      - ubuntu-toolchain-r-test
-    packages:
-      - g++-4.8
-sudo: true
-cache:
-  directories:
-  - node_modules
-before_install:
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
+  firefox: "48.0"
 install:
 - npm install
-- npm install webpack@2.2.1
-- npm install protractor@5.0.0
-- ./node_modules/protractor/bin/webdriver-manager update
+before_script:
+  - export DISPLAY=:99.0
+  - sh -e /etc/init.d/xvfb start
+  - sleep 3
+  - ./node_modules/protractor/bin/webdriver-manager update
 script:
 - npm run build
 - npm run test
 - node server.test.js &
 - npm run e2e
-env:
-  global:
-  - BUILD=1
-  - REMOTE_TESTS=1
-  - CXX=g++-4.8
+cache:
+  directories:
+    - node_modules
