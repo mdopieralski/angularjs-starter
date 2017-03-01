@@ -49,18 +49,17 @@
         "prebuild": "rm -rf dist && mkdir dist dist/assets/",
         "postbuild": "cp -r src/assets/img dist/assets/",
         "build": "BUILD=true USE_CONFIG=$npm_config_appConfig ./node_modules/webpack/bin/webpack.js",
-        "build:local": "npm run build --appConfig=local",
         "build:dev-api": "npm run build --appConfig=dev-api",
         "build:production": "npm run build --appConfig=production",
-        "dev-server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js  --config webpack.config.js --open --progress --profile --watch --content-base src/",
-        "start": "USE_CONFIG=$npm_config_appConfig ./node_modules/webpack-dashboard/bin/webpack-dashboard.js -- npm run dev-server",
-        "start:local": "npm start --appConfig=local",
+        "start": "USE_CONFIG=$npm_config_appConfig npm run webpack-dashboard -- npm run webpack-dev-server",
         "start:production": "npm start --appConfig=production",
         "jshint": "./node_modules/jshint/bin/jshint --reporter ./node_modules/jshint-stylish/ src/app",
         "precommit": "npm run jshint",
         "commit": "git-cz",
         "test": "./node_modules/karma/bin/karma start ./karma.config.js",
-        "e2e": "./node_modules/protractor/bin/protractor protractor.config.js"
+        "e2e": "./node_modules/protractor/bin/protractor protractor.config.js",
+        "webpack-dashboard": "USE_CONFIG=$npm_config_appConfig ./node_modules/webpack-dashboard/bin/webpack-dashboard.js",
+        "webpack-dev-server": "./node_modules/webpack-dev-server/bin/webpack-dev-server.js  --config webpack.config.js --open --progress --profile --watch --content-base src/"
     },
     "dependencies": {
         "ejs": "^2.5.5",
