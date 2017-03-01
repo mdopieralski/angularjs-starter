@@ -1,4 +1,4 @@
-const SpecReporter = require('jasmine-spec-reporter');
+let SpecReporter = require('jasmine-spec-reporter').SpecReporter;
 
 exports.config = {
   // seleniumAddress: 'http://localhost:4444/wd/hub',
@@ -25,6 +25,10 @@ exports.config = {
   onPrepare: function() {
     browser.ignoreSynchronization = true;
 
-    jasmine.getEnv().addReporter(new SpecReporter());
+    jasmine.getEnv().addReporter(new SpecReporter({
+      spec: {
+        displayStacktrace: true
+      }
+    }));
   }
 };
