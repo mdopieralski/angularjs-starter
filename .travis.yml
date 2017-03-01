@@ -20,10 +20,10 @@ install:
 - npm install protractor@3.2.2
 - ./node_modules/protractor/bin/webdriver-manager update
 script:
-- npm run build:local
+- npm run build
 - npm run test
 - node server.test.js &
-- npm run test-e2e
+- npm run e2e
 env:
   global:
   - BUILD=1
