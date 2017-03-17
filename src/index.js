@@ -8,7 +8,7 @@
 
 /*jshint unused:false*/
 
-import jQuery from 'expose?$!expose?jQuery!jquery';
+import jQuery from 'expose-loader?$!expose-loader?jQuery!jquery';
 import angular from 'angular';
 import uiRouter from 'angular-ui-router';
 
