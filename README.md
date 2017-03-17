@@ -1,8 +1,8 @@
-# angular-md-starter
+# angularjs-starter
 
-[![Build Status](https://travis-ci.org/mdopieralski/angular-md-starter.svg?branch=master)](https://travis-ci.org/mdopieralski/angular-md-starter)
-[![devDependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/dev-status.svg)](https://david-dm.org/mdopieralski/angular-md-starter?type=dev)
-[![dependencies Status](https://david-dm.org/mdopieralski/angular-md-starter/status.svg)](https://david-dm.org/mdopieralski/angular-md-starter)
+[![Build Status](https://travis-ci.org/mdopieralski/angularjs-starter.svg?branch=master)](https://travis-ci.org/mdopieralski/angularjs-starter)
+[![devDependencies Status](https://david-dm.org/mdopieralski/angularjs-starter/dev-status.svg)](https://david-dm.org/mdopieralski/angularjs-starter?type=dev)
+[![dependencies Status](https://david-dm.org/mdopieralski/angularjs-starter/status.svg)](https://david-dm.org/mdopieralski/angularjs-starter)
 
 Angular 1.6 starter kit. 
 Heavily inspired by [Todd Motto's](https://toddmotto.com/) [angular styleguide](https://github.com/toddmotto/angular-styleguide).
