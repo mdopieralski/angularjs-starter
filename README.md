@@ -1,62 +1,52 @@
 # angularjs-starter
+=======
 
 [![Build Status](https://travis-ci.org/mdopieralski/angularjs-starter.svg?branch=master)](https://travis-ci.org/mdopieralski/angularjs-starter)
 [![devDependencies Status](https://david-dm.org/mdopieralski/angularjs-starter/dev-status.svg)](https://david-dm.org/mdopieralski/angularjs-starter?type=dev)
 [![dependencies Status](https://david-dm.org/mdopieralski/angularjs-starter/status.svg)](https://david-dm.org/mdopieralski/angularjs-starter)
 
-Angular 1.6 starter kit. 
-Heavily inspired by [Todd Motto's](https://toddmotto.com/) [angular styleguide](https://github.com/toddmotto/angular-styleguide).
-
-NOTE: Required NodeJS v6.9.4 && NPM v.3.10.10
-
 Based on: 
 
-- [AngularJS 1.6.0](https://code.angularjs.org/1.6.0/docs/api)
+- [AngularJS 1.6.2](https://code.angularjs.org/1.6.2/docs/api)
 - [NPM](https://docs.npmjs.com/)
 - [Webpack](http://webpack.github.io/docs/)
 - [Karma](https://karma-runner.github.io)
 - [Jasmine](https://jasmine.github.io/)
 - [Protractor](http://www.protractortest.org/#/)
 
--------------
 
-### Setup
--------------
+## Requirements
+* node `^6.9.4`
+* npm `^3.10.10`
 
-Start with installing dependencies.
+## Gettings started
+
+#### Install dependencies
 
 `npm install`
 
-### Run
--------------
-`npm run start:CONFIG_NAME`
+#### Run project
 
-Where CONFIG_NAME is one of "/src/app/config/data/*constants.json". 
-Currently availbe configurations:
+`npm start`
 
-`npm run start:local-tests`
+#### All scripts
 
-`npm run start:local`
-
-`npm run start:production`
-
-`npm run start:remote-tests`
-
-
-### Tests
--------------
-`npm run test`
-
-`npm run test-e2e`
-
-### Contributing
--------------
-We use [commitizen](https://github.com/commitizen/cz-cli/), with [cz-conventional-changelog](https://github.com/commitizen/cz-conventional-changelog).
-
-`npm run commit`
-
-There's jshint hooked in "precommit" npm script.
-
-### Building
--------------------
-`npm run build:CONFIG_NAME`
+| Task                       | Description                                                          |
+|----------------------------|----------------------------------------------------------------------|
+| `prebuild`                 | Clear dist directory                                                 |
+| `build`                    | Build app with webpack and local app config.                         |
+| `build:production`         | Build app with webpack and production app config.                    |
+| `postbuild`                | Copy assets into dist directory.                                     |
+|                            |                                                                      |
+| `start`                    | Start webpack-dev-server with webpack-dashboard and local app config.|
+| `start:production`         | Start with production app config.                                    |
+| `webpack-dashboard`        | Runs webpack-dashboard.                                              |
+| `webpack-dev-server`       | Runs webpack-dev-server                                              |
+|                            |                                                                      |
+| `test`                     | Runs karma unit tests.                                               |
+| `e2e`                      | Runs protractor end to end tests.                                    |
+|                            |                                                                      |
+| `jshint`                   | Lint app/server/test files                                           |
+| `precommit`                | Lint before commit.                                                  |
+| `commit`                   | Commit with commitizen                                               |
+|                            |                                                                      |
